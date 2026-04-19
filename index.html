@@ -1537,13 +1537,469 @@ h1, h2, h3 {
   to { opacity: 1; transform: scale(1); filter: blur(0) drop-shadow(0 0 40px rgba(255, 45, 85, 0.15)); }
 }
 
-@media (max-width: 960px) {
-  .slide { padding: 2rem; }
-  .title-slide .slide-body, .two-col, .phase-detail, .ksim-grid, .closing-layout, .gap-compose { grid-template-columns: 1fr; gap: 2rem; }
-  .phases, .contrib-grid { grid-template-columns: 1fr; }
+/* ═══════════════════════════════════════════════════════════════
+   TABLET (≤ 960px) — mild adjustments, still slide-based
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 960px) and (min-width: 769px) {
+  .slide { padding: 2.5rem 3rem; }
+  .title-slide .slide-body, .two-col, .phase-detail, .ksim-grid, .closing-layout, .gap-compose { gap: 2.5rem; }
   .question-item { grid-template-columns: 4rem 7rem 1fr; gap: 1rem; }
-  .mega-han { font-size: 10rem; text-align: left; }
-  .title-vertical-label, .moon-jar { display: none; }
+  .mega-han { font-size: 14rem; }
+  .section-title { font-size: clamp(2rem, 4vw, 3rem); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE (≤ 768px) — full scroll experience with snap
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Convert from fixed keynote to scroll experience */
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  body::before, body::after {
+    position: fixed;
+  }
+
+  .deck {
+    position: relative;
+    height: auto;
+    width: 100%;
+    scroll-snap-type: y proximity;
+  }
+
+  .slide {
+    position: relative;
+    inset: auto;
+    min-height: 100vh;
+    min-height: 100svh; /* mobile viewport without URL bar chrome */
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: auto;
+    padding: 1.75rem 1.5rem 2rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  /* Corner brand: smaller, styled as pill */
+  .corner-brand {
+    top: 0.85rem;
+    right: 1rem;
+    font-size: 0.65rem;
+    padding: 0.35rem 0.7rem;
+    background: rgba(22, 22, 31, 0.85);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line-mid);
+    border-radius: 999px;
+    gap: 0.4rem;
+  }
+
+  .corner-brand .dot { width: 4px; height: 4px; }
+
+  /* Header/footer: more compact */
+  .slide-header,
+  .slide-footer {
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+  }
+
+  .slide-header {
+    padding-bottom: 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .slide-header .han { font-size: 0.72rem; }
+
+  .slide-footer {
+    padding-top: 0.85rem;
+  }
+
+  .slide-footer .brand { font-size: 0.68rem; }
+  .slide-footer .counter { font-size: 0.65rem; }
+
+  .slide-body {
+    padding: 1.5rem 0;
+  }
+
+  /* Typography scaling */
+  .eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .eyebrow .han-suffix { font-size: 0.72rem; }
+
+  .section-title {
+    font-size: clamp(1.8rem, 7.5vw, 2.4rem);
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+    line-height: 1.04;
+  }
+
+  .lede {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .body-text { font-size: 0.88rem; line-height: 1.65; }
+
+  /* ═══ SLIDE 1 — TITLE ═══ */
+  .title-slide .slide-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .title-right {
+    order: -1;
+    min-height: 220px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mega-han {
+    font-size: 7.5rem;
+    text-align: center;
+    letter-spacing: -0.04em;
+  }
+
+  .moon-jar {
+    width: 200px;
+    height: 200px;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .title-vertical-label { display: none; }
+
+  .title-tag {
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .title-tag .year-mark { font-size: 0.9rem; }
+  .title-tag .label { font-size: 0.6rem; letter-spacing: 0.18em; }
+
+  .title-slide h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    line-height: 1.0;
+    max-width: 100%;
+  }
+
+  .title-slide h1 .kr-top {
+    font-size: 0.52em;
+    margin-bottom: 0.6rem;
+  }
+
+  .title-slide h1 .tag-line {
+    font-size: 0.42em;
+    margin-top: 0.9rem;
+  }
+
+  .title-meta {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+  }
+
+  .title-meta .value { font-size: 0.85rem; }
+
+  /* ═══ SLIDE 2 — GAP ═══ */
+  .gap-compose {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gap-copy h2 {
+    font-size: clamp(1.8rem, 7vw, 2.2rem);
+  }
+
+  .gap-visual {
+    padding: 2rem 1.2rem;
+  }
+
+  .gap-cities {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .gap-city .han { font-size: 1.85rem; }
+  .gap-city .roman { font-size: 1.05rem; }
+
+  /* Divider goes from vertical to horizontal token between stacked cities */
+  .gap-divider {
+    top: auto;
+    bottom: auto;
+    left: 10%;
+    right: 10%;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--line-bright) 50%, transparent 100%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .gap-divider::before {
+    width: 42px;
+    height: 42px;
+  }
+
+  .gap-divider::after {
+    content: '↓';
+  }
+
+  .gap-brands {
+    gap: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  /* ═══ SLIDE 3 — PROBLEM ═══ */
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .col-left .han-caption { font-size: 0.9rem; margin-top: 1.2rem; padding-top: 1rem; }
+  .col-left .han-caption .kr { font-size: 1.05rem; }
+
+  .col-right p:last-child { font-size: 1.05rem; }
+
+  /* ═══ SLIDE 4 — RESEARCH QUESTIONS ═══ */
+  .question-grid {
+    margin-top: 1rem;
+  }
+
+  .question-item {
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.6rem 1rem;
+    padding: 1.4rem 0;
+  }
+
+  .question-num {
+    font-size: 2.6rem;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .question-num .kr {
+    font-size: 0.28em;
+    margin-top: 0.3rem;
+  }
+
+  .question-kind {
+    grid-row: 1;
+    grid-column: 2;
+    padding-top: 0.25rem;
+  }
+
+  .question-kind .badge {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+  }
+
+  .question-kind .korean { font-size: 0.9rem; }
+
+  .question-text {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-top: 0.3rem;
+  }
+
+  /* ═══ SLIDE 5 — FRAMEWORK ═══ */
+  .framework {
+    margin-top: 1rem;
+    gap: 0.6rem;
+  }
+
+  .framework-level {
+    grid-template-columns: 5rem 1fr;
+    gap: 1rem;
+    padding: 1.2rem 1.3rem;
+  }
+
+  .framework-level:nth-child(2),
+  .framework-level:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .fw-number { display: none; }
+
+  .fw-scale .han { font-size: 1.2rem; }
+  .fw-scale .roman { font-size: 0.6rem; letter-spacing: 0.18em; }
+
+  .fw-body .label { font-size: 1rem; }
+  .fw-body .detail { font-size: 0.78rem; line-height: 1.5; }
+
+  /* ═══ SLIDE 6 — PHASES ═══ */
+  .phases {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .phase {
+    padding: 1.8rem 1.4rem 1.5rem;
+  }
+
+  .phase-num { font-size: 2.4rem; }
+  .phase-name { font-size: 1.1rem; }
+  .phase ul { font-size: 0.82rem; }
+
+  /* ═══ SLIDES 7-9 — PHASE DETAIL ═══ */
+  .phase-detail {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .phase-marker {
+    padding-top: 0;
+  }
+
+  .phase-marker .mega-num {
+    font-size: 5rem;
+  }
+
+  .phase-marker .kr-han {
+    font-size: 1.7rem;
+  }
+
+  .phase-marker .big-label {
+    font-size: 1.3rem;
+  }
+
+  .phase-marker .sub {
+    padding-top: 0.9rem;
+    font-size: 0.62rem;
+  }
+
+  .phase-content h3 {
+    font-size: 1rem;
+    margin: 1.2rem 0 0.4rem;
+  }
+
+  .phase-content h3 .mono { font-size: 0.56rem; }
+
+  .phase-content p { font-size: 0.86rem; }
+
+  .chip { font-size: 0.6rem; padding: 0.3rem 0.6rem; }
+
+  /* ═══ SLIDE 10 — CONTRIBUTIONS ═══ */
+  .contrib-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contrib-card {
+    min-height: auto;
+    padding: 1.8rem 1.4rem;
+  }
+
+  .contrib-card .roman { font-size: 1.7rem; }
+  .contrib-card .han-label { font-size: 1rem; }
+  .contrib-card .title { font-size: 1.25rem; }
+  .contrib-card .desc { font-size: 0.85rem; }
+
+  /* ═══ SLIDE 11 — WHY KSIM ═══ */
+  .ksim-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 1rem;
+  }
+
+  .taegeuk {
+    max-width: 280px;
+  }
+
+  .ksim-point {
+    padding: 1rem 1.2rem;
+  }
+
+  .ksim-point .heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .ksim-point .heading { font-size: 1rem; }
+  .ksim-point .kr-mark { font-size: 0.85rem; }
+  .ksim-point .body { font-size: 0.83rem; }
+
+  /* ═══ SLIDE 12 — CLOSING ═══ */
+  .closing-layout {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .closing-slide h1 {
+    font-size: clamp(2rem, 8.5vw, 2.8rem);
+    max-width: 100%;
+  }
+
+  .closing-lede { font-size: 1rem; margin-top: 1.2rem; }
+
+  .closing-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .closing-card .mega-gamsa {
+    font-size: 2.4rem;
+  }
+
+  .closing-card .gamsa-roman { font-size: 0.95rem; margin-bottom: 1.2rem; }
+
+  /* ═══ NAV — restyle for mobile ═══ */
+  .nav {
+    bottom: 1rem;
+    padding: 0.4rem 0.85rem;
+    gap: 0.7rem;
+  }
+
+  .nav button { font-size: 0.95rem; padding: 0.15rem 0.45rem; }
+  .nav .counter { font-size: 0.62rem; min-width: 3rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SMALL PHONES (≤ 400px) — tightest
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .slide { padding: 1.5rem 1.15rem 1.75rem; }
+
+  .slide-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .slide-header .han,
+  .slide-footer .brand { font-size: 0.65rem; }
+
+  .mega-han { font-size: 6rem; }
+  .moon-jar { width: 170px; height: 170px; }
+
+  .title-slide h1 { font-size: 1.85rem; }
+  .closing-slide h1 { font-size: 2rem; }
+  .closing-card .mega-gamsa { font-size: 2rem; }
+
+  .phase-marker .mega-num { font-size: 4.2rem; }
+  .phase-marker .kr-han { font-size: 1.5rem; }
+  .phase-marker .big-label { font-size: 1.15rem; }
+
+  .gap-city .han { font-size: 1.6rem; }
 }
 </style>
 </head>
@@ -2283,29 +2739,99 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const counter = document.getElementById('current');
 const progress = document.getElementById('progress');
-let current = 0;
 
-function show(idx) {
-  slides[current].classList.remove('active');
-  current = Math.max(0, Math.min(total - 1, idx));
-  slides[current].classList.add('active');
-  counter.textContent = String(current + 1).padStart(2, '0');
-  progress.style.width = ((current + 1) / total * 100) + '%';
-  prev.disabled = current === 0;
-  next.disabled = current === total - 1;
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+/* ─────────── MOBILE: scroll-snap + IntersectionObserver ─────────── */
+function initMobile() {
+  let currentIdx = 0;
+
+  const scrollToSlide = (idx) => {
+    const clamped = Math.max(0, Math.min(total - 1, idx));
+    slides[clamped].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  prev.addEventListener('click', () => scrollToSlide(currentIdx - 1));
+  next.addEventListener('click', () => scrollToSlide(currentIdx + 1));
+
+  // Reveal animations + progress tracking
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Reveal the slide once it enters view (sticky)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+
+      // Update counter + progress when ≥ 50% visible
+      if (entry.intersectionRatio >= 0.5) {
+        const idx = Array.from(slides).indexOf(entry.target);
+        if (idx >= 0) {
+          currentIdx = idx;
+          counter.textContent = String(idx + 1).padStart(2, '0');
+          progress.style.width = ((idx + 1) / total * 100) + '%';
+          prev.disabled = idx === 0;
+          next.disabled = idx === total - 1;
+        }
+      }
+    });
+  }, {
+    threshold: [0.15, 0.5],
+    rootMargin: '0px'
+  });
+
+  // First slide always active on load
+  slides[0].classList.add('active');
+  counter.textContent = '01';
+  progress.style.width = (1 / total * 100) + '%';
+  prev.disabled = true;
+
+  slides.forEach(s => observer.observe(s));
 }
 
-prev.addEventListener('click', () => show(current - 1));
-next.addEventListener('click', () => show(current + 1));
+/* ─────────── DESKTOP: classic slide-by-slide keynote ─────────── */
+function initDesktop() {
+  let current = 0;
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(current + 1); }
-  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
-  if (e.key === 'Home') { e.preventDefault(); show(0); }
-  if (e.key === 'End') { e.preventDefault(); show(total - 1); }
+  function show(idx) {
+    slides[current].classList.remove('active');
+    current = Math.max(0, Math.min(total - 1, idx));
+    slides[current].classList.add('active');
+    counter.textContent = String(current + 1).padStart(2, '0');
+    progress.style.width = ((current + 1) / total * 100) + '%';
+    prev.disabled = current === 0;
+    next.disabled = current === total - 1;
+  }
+
+  prev.addEventListener('click', () => show(current - 1));
+  next.addEventListener('click', () => show(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+    if (e.key === 'Home') { e.preventDefault(); show(0); }
+    if (e.key === 'End') { e.preventDefault(); show(total - 1); }
+  });
+
+  show(0);
+}
+
+/* ─────────── INIT ─────────── */
+if (isMobile()) {
+  initMobile();
+} else {
+  initDesktop();
+}
+
+/* If device rotates across the breakpoint, reload for clean state */
+let wasMobile = isMobile();
+window.addEventListener('resize', () => {
+  const nowMobile = isMobile();
+  if (nowMobile !== wasMobile) {
+    // Debounced reload on orientation change that crosses breakpoint
+    clearTimeout(window._ksimResizeTimer);
+    window._ksimResizeTimer = setTimeout(() => location.reload(), 350);
+  }
 });
-
-show(0);
 </script>
 
 </body>
