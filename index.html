@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>한국 브랜드 경쟁력 · Korean Branding Competitiveness as a Thai Benchmark</title>
+
+<!-- Meta -->
+<meta name="description" content="A doctoral dissertation proposal on Korean branding and marketing-communication competitiveness as a strategic benchmark for Thai organizations — KSIM, Chulalongkorn University.">
+<meta name="author" content="KSIM PhD Proposal">
+<meta name="theme-color" content="#09090F">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Korean Branding Competitiveness as a Thai Benchmark — KSIM PhD Proposal">
+<meta property="og:description" content="A mixed-methods doctoral research proposal examining Korean branding and marketing-communication competitiveness as a benchmark for Thai organizations. KSIM · Chulalongkorn University.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="th_TH">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Korean Branding Competitiveness as a Thai Benchmark">
+<meta name="twitter:description" content="PhD Dissertation Proposal — KSIM, Chulalongkorn University.">
+
+<!-- Favicon: inline SVG with 韓 mark -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2309090F'/><text x='50' y='72' text-anchor='middle' font-family='serif' font-size='62' fill='%23FF2D55' font-weight='500'>韓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Deep dark foundation — slight cool undertone like Seoul at night */
+  --bg: #09090F;
+  --bg-2: #0F0F18;
+  --bg-elev: #16161F;
+  --bg-panel: #1C1C26;
+  --bg-panel-hi: #23232E;
+
+  /* Thin lines */
+  --line: rgba(255, 255, 255, 0.06);
+  --line-mid: rgba(255, 255, 255, 0.12);
+  --line-bright: rgba(255, 255, 255, 0.22);
+
+  /* Typography colors */
+  --text: #F5F3EC;
+  --text-2: #D8D4C8;
+  --text-dim: #9A968A;
+  --text-muted: #65625A;
+
+  /* Vivid Korean accents — Seoul neon palette */
+  --red: #FF2D55;          /* vivid Korean crimson, slightly pink-shifted */
+  --red-deep: #E8173E;
+  --red-soft: rgba(255, 45, 85, 0.14);
+  --red-glow: rgba(255, 45, 85, 0.35);
+
+  --cyan: #00E5FF;         /* electric Taegeuk cyan */
+  --cyan-soft: rgba(0, 229, 255, 0.12);
+  --cyan-glow: rgba(0, 229, 255, 0.35);
+
+  --gold: #FFD54F;         /* vivid obangsaek gold */
+  --gold-soft: rgba(255, 213, 79, 0.12);
+
+  --purple: #B794F4;       /* K-pop borahae purple */
+  --pink: #FF4B93;         /* hot K-pop pink */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ambient Seoul-at-night glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 50% 40% at 10% 5%, rgba(255, 45, 85, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 95% 100%, rgba(0, 229, 255, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(183, 148, 244, 0.025) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Subtle grain */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.9;
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+.deck {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  padding: 3.25rem 5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Chrome — tight, luxe, minimal */
+.slide-header,
+.slide-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.slide-header {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.slide-header .left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.slide-header .left .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--red-glow);
+}
+
+.slide-header .han {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  color: var(--text);
+  font-weight: 300;
+  text-transform: none;
+}
+
+.slide-header .han .accent {
+  color: var(--red);
+}
+
+.slide-footer {
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.slide-footer .brand {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 300;
+  color: var(--text-2);
+}
+
+.slide-footer .counter {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.slide-footer .counter .current {
+  color: var(--red);
+  font-weight: 500;
+}
+
+.slide-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* Typography system */
+h1, h2, h3 {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red-glow);
+}
+
+.eyebrow .han-suffix {
+  color: var(--text-dim);
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 300;
+}
+
+.section-title {
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 300;
+  max-width: 22ch;
+  line-height: 1.02;
+  margin-bottom: 1.8rem;
+  color: var(--text);
+  letter-spacing: -0.025em;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--red);
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+}
+
+.lede {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 62ch;
+  letter-spacing: -0.005em;
+}
+
+.lede em {
+  font-style: italic;
+  color: var(--red);
+}
+
+.body-text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  max-width: 62ch;
+  font-weight: 300;
+}
+
+/* Gradient text utility */
+.grad-text {
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 50%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grad-text-cyan {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ═══════════════════════ SLIDE 1 — TITLE ═══════════════════════ */
+.title-slide .slide-body {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.title-left { position: relative; z-index: 2; }
+
+.title-tag {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 0.5rem 0.9rem;
+  width: fit-content;
+  border: 1px solid var(--line-mid);
+  background: var(--bg-elev);
+  border-radius: 999px;
+}
+
+.title-tag .year-mark {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
+  color: var(--red);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.title-tag .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--line-bright);
+}
+
+.title-slide h1 {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+  color: var(--text);
+}
+
+.title-slide h1 .kr-top {
+  display: block;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.45em;
+  color: var(--cyan);
+  font-weight: 300;
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.005em;
+  text-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.title-slide h1 em {
+  font-style: italic;
+  color: transparent;
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 400;
+}
+
+.title-slide h1 .tag-line {
+  display: block;
+  font-family: 'Instrument Serif', serif;
+  font-size: 0.34em;
+  font-style: italic;
+  color: var(--text-dim);
+  margin-top: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.title-meta {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem 2.5rem;
+  max-width: 56ch;
+}
+
+.title-meta .item {
+  position: relative;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line-mid);
+}
+
+.title-meta .item::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--red);
+  box-shadow: 0 0 10px var(--red-glow);
+}
+
+.title-meta .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.title-meta .value {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  font-weight: 300;
+  color: var(--text);
+}
+
+/* Title right — massive gradient Korean character */
+.title-right {
+  position: relative;
+  height: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.mega-han {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(14rem, 24vw, 24rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  background: linear-gradient(140deg, var(--red) 0%, var(--pink) 40%, var(--purple) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  filter: drop-shadow(0 0 40px rgba(255, 45, 85, 0.15));
+}
+
+.mega-han .second {
+  display: block;
+  background: linear-gradient(140deg, var(--cyan) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: -0.2em;
+  filter: drop-shadow(0 0 40px rgba(0, 229, 255, 0.15));
+}
+
+.title-vertical-label {
+  position: absolute;
+  top: 50%;
+  right: -0.5rem;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: right center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.moon-jar {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 380px;
+  height: 380px;
+  border: 1px solid var(--line-mid);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.moon-jar::before {
+  content: '';
+  position: absolute;
+  inset: 15%;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+/* ═══════════════════════ SLIDE 2 — GAP ═══════════════════════ */
+.gap-compose {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.gap-copy h2 {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.02;
+  max-width: 16ch;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.gap-copy h2 em {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gap-visual {
+  position: relative;
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, var(--bg-elev) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--line-mid);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gap-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--red) 50%, transparent 100%);
+  opacity: 0.6;
+}
+
+.gap-cities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.gap-city { text-align: center; position: relative; z-index: 2; }
+
+.gap-city .year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.gap-city .han {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.gap-city.bangkok .han {
+  color: var(--cyan);
+  text-shadow: 0 0 30px var(--cyan-glow);
+}
+
+.gap-city.seoul .han {
+  color: var(--red);
+  text-shadow: 0 0 30px var(--red-glow);
+}
+
+.gap-city .roman {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.gap-city .status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 0.55rem;
+  font-weight: 400;
+}
+
+.gap-divider {
+  position: absolute;
+  top: 3.5rem;
+  bottom: 5rem;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, var(--line-bright) 50%, transparent 100%);
+}
+
+.gap-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: var(--bg);
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 24px var(--red-glow), inset 0 0 24px rgba(255, 45, 85, 0.1);
+}
+
+.gap-divider::after {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.2rem;
+  color: var(--red);
+  font-style: italic;
+  z-index: 2;
+}
+
+.gap-brands {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.8rem;
+  font-family: 'Instrument Serif', serif;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.gap-brands span.k {
+  color: var(--red);
+  font-weight: 400;
+}
+
+/* ═══════════════════════ SLIDE 3 — PROBLEM ═══════════════════════ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.col-left .han-caption {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-mid);
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+.col-left .han-caption .kr {
+  display: block;
+  color: var(--red);
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 20px var(--red-glow);
+}
+
+.col-right p { margin-bottom: 1.2rem; }
+
+.col-right p:last-child {
+  margin-bottom: 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line-mid);
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.18rem;
+  color: var(--red);
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 0 0 30px var(--red-glow);
+}
+
+/* ═══════════════════════ SLIDE 4 — RESEARCH QUESTIONS ═══════════════════════ */
+.question-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.question-item {
+  display: grid;
+  grid-template-columns: 6rem 9rem 1fr;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line-mid);
+  align-items: start;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.question-item::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--red);
+  transition: width 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: 0 0 10px var(--red-glow);
+}
+
+.slide.active .question-item.animate-in::before {
+  animation: growLine 0.8s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation-delay: inherit;
+}
+
+@keyframes growLine {
+  to { width: 100%; }
+}
+
+.question-item:last-child { border-bottom: 1px solid var(--line-mid); }
+
+.question-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.85;
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.question-item:nth-child(2) .question-num {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.question-item:nth-child(3) .question-num {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.question-num .kr {
+  display: block;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.26em;
+  color: var(--text-dim);
+  margin-top: 0.6rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-fill-color: var(--text-dim);
+}
+
+.question-kind { padding-top: 0.5rem; }
+
+.question-kind .badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 0.45rem;
+}
+
+.question-kind .korean {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1rem;
+  color: var(--red);
+  font-weight: 400;
+}
+
+.question-item:nth-child(2) .question-kind .korean { color: var(--gold); }
+.question-item:nth-child(3) .question-kind .korean { color: var(--cyan); }
+
+.question-text {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  color: var(--text-2);
+  font-weight: 400;
+  padding-top: 0.5rem;
+  letter-spacing: -0.005em;
+}
+
+/* ═══════════════════════ SLIDE 5 — FRAMEWORK ═══════════════════════ */
+.framework {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.framework-level {
+  display: grid;
+  grid-template-columns: 8rem 1fr auto;
+  gap: 2rem;
+  padding: 1.5rem 1.8rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--line-mid);
+  position: relative;
+  align-items: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.framework-level::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.framework-level:nth-child(1)::before {
+  background: var(--red);
+  box-shadow: 0 0 20px var(--red-glow), inset 0 0 5px rgba(255, 45, 85, 0.3);
+}
+
+.framework-level:nth-child(2)::before {
+  background: var(--gold);
+  box-shadow: 0 0 20px rgba(255, 213, 79, 0.3);
+}
+
+.framework-level:nth-child(3)::before {
+  background: var(--cyan);
+  box-shadow: 0 0 20px var(--cyan-glow), inset 0 0 5px rgba(0, 229, 255, 0.3);
+}
+
+.framework-level:nth-child(2) { margin-left: 2.5rem; }
+.framework-level:nth-child(3) { margin-left: 5rem; }
+
+.fw-scale { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.fw-scale .han {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.framework-level:nth-child(1) .fw-scale .han { color: var(--red); }
+.framework-level:nth-child(2) .fw-scale .han { color: var(--gold); }
+.framework-level:nth-child(3) .fw-scale .han { color: var(--cyan); }
+
+.fw-scale .roman {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.fw-body .label {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.fw-body .detail {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+.fw-number {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  opacity: 0.2;
+  letter-spacing: -0.02em;
+}
+
+/* ═══════════════════════ SLIDE 6 — PHASES ═══════════════════════ */
+.phases {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.phase {
+  position: relative;
+  padding: 2.2rem 1.6rem 1.8rem;
+  background: linear-gradient(180deg, var(--bg-elev) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--line-mid);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  overflow: hidden;
+}
+
+.phase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background: var(--red);
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+.phase:nth-child(2)::before { background: var(--gold); box-shadow: 0 0 20px rgba(255, 213, 79, 0.4); }
+.phase:nth-child(3)::before { background: var(--cyan); box-shadow: 0 0 20px var(--cyan-glow); }
+
+.phase-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.phase-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 3rem;
+  line-height: 0.85;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--red);
+}
+
+.phase:nth-child(2) .phase-num { color: var(--gold); }
+.phase:nth-child(3) .phase-num { color: var(--cyan); }
+
+.phase-num .kr {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.4em;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 0.4rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.phase-verb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-align: right;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.phase-name {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.phase ul {
+  list-style: none;
+  font-size: 0.86rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+.phase ul li {
+  padding: 0.35rem 0 0.35rem 1rem;
+  position: relative;
+}
+
+.phase ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  width: 6px;
+  height: 1px;
+  background: var(--red);
+}
+
+.phase:nth-child(2) ul li::before { background: var(--gold); }
+.phase:nth-child(3) ul li::before { background: var(--cyan); }
+
+/* ═══════════════════════ SLIDES 7-9 — PHASE DETAIL ═══════════════════════ */
+.phase-detail {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+.phase-marker { position: relative; padding-top: 1rem; }
+
+.phase-marker .mega-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 8rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 30px rgba(255, 45, 85, 0.25));
+}
+
+.phase-marker.gold .mega-num {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(255, 213, 79, 0.3));
+}
+
+.phase-marker.cyan .mega-num {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
+}
+
+.phase-marker .kr-han {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.phase-marker .big-label {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.phase-marker .sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line-mid);
+  font-weight: 500;
+}
+
+.phase-content h3 {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 1.5rem 0 0.55rem;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  letter-spacing: -0.01em;
+}
+
+.phase-content h3:first-child { margin-top: 0; }
+
+.phase-content h3 .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+}
+
+.phase-content p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  margin-bottom: 0.6rem;
+  font-weight: 300;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.7rem 0 0.3rem;
+}
+
+.chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line-bright);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-weight: 500;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ═══════════════════════ SLIDE 10 — CONTRIBUTIONS ═══════════════════════ */
+.contrib-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+.contrib-card {
+  padding: 2.2rem 1.7rem;
+  background: linear-gradient(180deg, var(--bg-elev) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--line-mid);
+  position: relative;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contrib-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--red);
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+.contrib-card:nth-child(2)::before { background: var(--gold); box-shadow: 0 0 20px rgba(255, 213, 79, 0.4); }
+.contrib-card:nth-child(3)::before { background: var(--cyan); box-shadow: 0 0 20px var(--cyan-glow); }
+
+.contrib-card .card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.3rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contrib-card .roman {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  line-height: 0.9;
+}
+
+.contrib-card .han-label {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.15rem;
+  color: var(--red);
+  font-weight: 500;
+  text-align: right;
+  text-shadow: 0 0 20px var(--red-glow);
+}
+
+.contrib-card:nth-child(2) .han-label { color: var(--gold); text-shadow: 0 0 20px rgba(255, 213, 79, 0.4); }
+.contrib-card:nth-child(3) .han-label { color: var(--cyan); text-shadow: 0 0 20px var(--cyan-glow); }
+
+.contrib-card .title {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.contrib-card .desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-2);
+  font-weight: 300;
+}
+
+/* ═══════════════════════ SLIDE 11 — WHY KSIM ═══════════════════════ */
+.ksim-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3.5rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.taegeuk {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.taegeuk svg { width: 100%; height: 100%; }
+
+.ksim-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.ksim-point {
+  padding: 1.2rem 1.5rem;
+  border-left: 3px solid var(--red);
+  background: var(--bg-elev);
+  position: relative;
+  border-radius: 0 3px 3px 0;
+  overflow: hidden;
+}
+
+.ksim-point::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--red);
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+.ksim-point:nth-child(2) { border-left-color: var(--gold); }
+.ksim-point:nth-child(2)::before { background: var(--gold); box-shadow: 0 0 20px rgba(255, 213, 79, 0.4); }
+.ksim-point:nth-child(3) { border-left-color: var(--cyan); }
+.ksim-point:nth-child(3)::before { background: var(--cyan); box-shadow: 0 0 20px var(--cyan-glow); }
+
+.ksim-point .heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  gap: 1rem;
+}
+
+.ksim-point .heading {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+.ksim-point .kr-mark {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.95rem;
+  color: var(--red);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ksim-point:nth-child(2) .kr-mark { color: var(--gold); }
+.ksim-point:nth-child(3) .kr-mark { color: var(--cyan); }
+
+.ksim-point .body {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-2);
+  font-weight: 300;
+}
+
+/* ═══════════════════════ SLIDE 12 — CLOSING ═══════════════════════ */
+.closing-slide .slide-body { justify-content: center; }
+
+.closing-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.closing-slide h1 {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: clamp(3rem, 5.4vw, 5rem);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+  color: var(--text);
+}
+
+.closing-slide h1 .row { display: block; }
+
+.closing-slide h1 .accent {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.closing-lede {
+  font-family: 'Instrument Serif', 'Noto Serif KR', serif;
+  font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+  line-height: 1.55;
+  color: var(--text-2);
+  margin-top: 2rem;
+  max-width: 52ch;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+.closing-lede em {
+  font-style: italic;
+  color: var(--red);
+}
+
+.closing-card {
+  background: linear-gradient(180deg, var(--bg-elev) 0%, var(--bg-panel) 100%);
+  border: 1px solid var(--line-mid);
+  padding: 2.5rem 2rem;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.closing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red) 0%, var(--pink) 50%, var(--purple) 100%);
+  box-shadow: 0 0 30px var(--red-glow);
+}
+
+.closing-card .mega-gamsa {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--red) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 0 25px rgba(255, 45, 85, 0.3));
+}
+
+.closing-card .gamsa-roman {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  margin-bottom: 1.6rem;
+  font-style: italic;
+}
+
+.closing-card .thank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.closing-card .thank-list .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.closing-card .thank-list .kr {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.closing-card .thank-list .en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.closing-card .thank-list .line:last-child .kr {
+  color: var(--red);
+  font-style: italic;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
+}
+
+/* ═══════════════════════ NAV ═══════════════════════ */
+.nav {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 100;
+  padding: 0.55rem 1.1rem;
+  background: rgba(22, 22, 31, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--line-bright);
+  border-radius: 999px;
+  box-shadow: 0 0 40px rgba(255, 45, 85, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text);
+  padding: 0.2rem 0.6rem;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.nav button:hover { color: var(--red); }
+.nav button:disabled { opacity: 0.3; cursor: default; }
+
+.nav .counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  min-width: 3.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.nav .counter .sep { color: var(--text-dim); margin: 0 0.3rem; }
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red) 0%, var(--pink) 100%);
+  z-index: 101;
+  transition: width 0.55s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: 0 0 16px var(--red-glow);
+}
+
+.corner-brand {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 50;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.corner-brand .dot {
+  width: 5px;
+  height: 5px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--red-glow);
+}
+
+/* Entrance animations */
+.slide.active .animate-in {
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.slide.active .delay-1 { animation-delay: 0.08s; }
+.slide.active .delay-2 { animation-delay: 0.20s; }
+.slide.active .delay-3 { animation-delay: 0.32s; }
+.slide.active .delay-4 { animation-delay: 0.44s; }
+.slide.active .delay-5 { animation-delay: 0.56s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide.active .mega-han {
+  animation: fadeScale 1.4s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes fadeScale {
+  from { opacity: 0; transform: scale(0.96); filter: blur(4px) drop-shadow(0 0 40px rgba(255, 45, 85, 0)); }
+  to { opacity: 1; transform: scale(1); filter: blur(0) drop-shadow(0 0 40px rgba(255, 45, 85, 0.15)); }
+}
+
+@media (max-width: 960px) {
+  .slide { padding: 2rem; }
+  .title-slide .slide-body, .two-col, .phase-detail, .ksim-grid, .closing-layout, .gap-compose { grid-template-columns: 1fr; gap: 2rem; }
+  .phases, .contrib-grid { grid-template-columns: 1fr; }
+  .question-item { grid-template-columns: 4rem 7rem 1fr; gap: 1rem; }
+  .mega-han { font-size: 10rem; text-align: left; }
+  .title-vertical-label, .moon-jar { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="corner-brand">
+  <span class="dot"></span>
+  <span>한국 연구 · KSIM</span>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1 — TITLE -->
+  <section class="slide title-slide active" data-slide="1">
+    <div class="slide-header">
+      <div class="left">
+        <span class="dot"></span>
+        <span>Doctoral Dissertation Proposal</span>
+      </div>
+      <div class="right">
+        <span class="han">박사학위 <span class="accent">논문</span> 제안서</span>
+      </div>
+    </div>
+
+    <div class="slide-body">
+      <div class="title-left">
+        <div class="title-tag animate-in delay-1">
+          <span class="year-mark">2026</span>
+          <span class="label">Academic Year · 학년도</span>
+        </div>
+
+        <h1 class="animate-in delay-2">
+          <span class="kr-top">한국 브랜드 경쟁력</span>
+          Korean Branding &amp;<br>
+          Marketing Communication<br>
+          <em>Competitiveness</em> as a<br>
+          Strategic <em>Benchmark</em>
+          <span class="tag-line">for Thai Organizations · 태국 기관을 위한 전략적 벤치마크</span>
+        </h1>
+
+        <div class="title-meta animate-in delay-4">
+          <div class="item">
+            <div class="label">Program · 프로그램</div>
+            <div class="value">Korean Studies for International Management (KSIM)</div>
+          </div>
+          <div class="item">
+            <div class="label">Institution · 기관</div>
+            <div class="value">Graduate School, Chulalongkorn University</div>
+          </div>
+          <div class="item">
+            <div class="label">Design · 연구 설계</div>
+            <div class="value">Mixed-methods · Three-phase explanatory</div>
+          </div>
+          <div class="item">
+            <div class="label">Candidate · 지원자</div>
+            <div class="value">Vice President for Marketing Communications, UTCC</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="title-right">
+        <div class="moon-jar"></div>
+        <div class="mega-han">
+          韓
+          <span class="second">泰</span>
+        </div>
+        <span class="title-vertical-label">Korea · Thailand · Benchmark Study</span>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">01</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 — GAP -->
+  <section class="slide" data-slide="2">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>01 · Opening</span></div>
+      <div class="right"><span class="han"><span class="accent">연구</span> 배경</span> · The Research Problem</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="gap-compose">
+        <div class="gap-copy">
+          <div class="eyebrow animate-in delay-1">
+            The Twenty-Year Gap <span class="han-suffix">이십 년의 격차</span>
+          </div>
+          <h2 class="animate-in delay-2">
+            Two capitals.<br>
+            Two trajectories.<br>
+            One <em>widening gap</em>.
+          </h2>
+          <p class="body-text animate-in delay-3">
+            Two decades ago, branded consumer propositions in Bangkok and Seoul were
+            roughly comparable. Today, they are not — and the divergence is systematic,
+            not accidental.
+          </p>
+        </div>
+
+        <div class="gap-visual animate-in delay-3">
+          <div class="gap-cities">
+            <div class="gap-city bangkok">
+              <div class="year">CIRCA 2004</div>
+              <div class="han">방콕</div>
+              <div class="roman">Bangkok</div>
+              <div class="status">Baseline · 기준선</div>
+            </div>
+            <div class="gap-city seoul">
+              <div class="year">2026</div>
+              <div class="han">서울</div>
+              <div class="roman">Seoul</div>
+              <div class="status">Global Brand Cluster</div>
+            </div>
+          </div>
+          <div class="gap-divider"></div>
+          <div class="gap-brands">
+            <span class="k">Samsung</span>
+            <span class="k">Hyundai</span>
+            <span class="k">Amorepacific</span>
+            <span class="k">HYBE</span>
+            <span class="k">Naver</span>
+            <span class="k">CJ ENM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">02</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 — PROBLEM -->
+  <section class="slide" data-slide="3">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>02 · Problem Statement</span></div>
+      <div class="right"><span class="han"><span class="accent">연구</span> 문제</span> · Anecdote vs. Benchmark</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="two-col">
+        <div class="col-left">
+          <div class="eyebrow animate-in delay-1">
+            The Problem <span class="han-suffix">문제 진술</span>
+          </div>
+          <h2 class="section-title animate-in delay-2">
+            Korean excellence<br>
+            enters Thai practice<br>
+            as <em>anecdote</em>, not<br>
+            as a <em>benchmark</em>.
+          </h2>
+          <div class="han-caption animate-in delay-3">
+            <span class="kr">일화에서 벤치마크로</span>
+            From anecdote to benchmark — the shift this dissertation proposes.
+          </div>
+        </div>
+
+        <div class="col-right animate-in delay-3">
+          <p class="lede">
+            Thai practitioners admire Korean brands and cite them constantly —
+            yet Korean cases enter Thai management thinking <em>anecdotally</em>,
+            not systematically. As outputs to be imitated, not as systems to be learned from.
+          </p>
+          <p class="body-text">
+            The Thai-authored literature on Korean brand competitiveness is thin.
+            Southeast Asian comparative perspectives are under-represented internationally.
+            The result: Thai organizations imitate surface form without understanding
+            underlying system — producing predictably inconsistent results.
+          </p>
+          <p>
+            This dissertation closes that gap through a rigorous, Thai-standpoint,
+            scholarly-anchored benchmarking study.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">03</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 — RQS -->
+  <section class="slide" data-slide="4">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>03 · Research Questions</span></div>
+      <div class="right"><span class="han"><span class="accent">연구</span> 질문</span> · Three Anchors</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Three Anchoring Questions <span class="han-suffix">세 가지 연구 질문</span>
+      </div>
+      <h2 class="section-title animate-in delay-2">
+        Prescription rests on comparison.<br>
+        Comparison rests on <em>disciplined description</em>.
+      </h2>
+
+      <div class="question-grid">
+        <div class="question-item animate-in delay-3">
+          <div class="question-num">01<span class="kr">일</span></div>
+          <div class="question-kind">
+            <div class="badge">Descriptive &amp; Analytical</div>
+            <div class="korean">서술·분석</div>
+          </div>
+          <div class="question-text">
+            What specific branding and marketing-communication capabilities underlie the competitiveness
+            of leading Korean firms, and how do they combine into a coherent managerial system?
+          </div>
+        </div>
+
+        <div class="question-item animate-in delay-4">
+          <div class="question-num">02<span class="kr">이</span></div>
+          <div class="question-kind">
+            <div class="badge">Comparative</div>
+            <div class="korean">비교</div>
+          </div>
+          <div class="question-text">
+            Where — and along which dimensions — do Thai organizations most significantly diverge
+            from the Korean benchmark, and what institutional and cultural factors account for the divergence?
+          </div>
+        </div>
+
+        <div class="question-item animate-in delay-5">
+          <div class="question-num">03<span class="kr">삼</span></div>
+          <div class="question-kind">
+            <div class="badge">Prescriptive</div>
+            <div class="korean">처방</div>
+          </div>
+          <div class="question-text">
+            Which elements of the Korean model are genuinely transferable to Thai organizational contexts,
+            which require substantial adaptation, and which should not be imported at all?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">04</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 — FRAMEWORK -->
+  <section class="slide" data-slide="5">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>04 · Theoretical Framework</span></div>
+      <div class="right"><span class="han"><span class="accent">개념적</span> 틀</span> · Multi-Level</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Conceptual Framework <span class="han-suffix">다층 분석 구조</span>
+      </div>
+      <h2 class="section-title animate-in delay-2">
+        A <em>multi-level</em> framework<br>
+        for a <em>multi-level</em> phenomenon.
+      </h2>
+
+      <div class="framework">
+        <div class="framework-level animate-in delay-3">
+          <div class="fw-scale">
+            <span class="han">국가</span>
+            <span class="roman">National · I</span>
+          </div>
+          <div class="fw-body">
+            <div class="label">Nation Branding &amp; Competitive Identity</div>
+            <div class="detail">Porter's Diamond (1990) · Anholt's Competitive Identity (2007) · Dinnie Nation Branding (2016) — the institutional conditions producing Korean brand competitiveness.</div>
+          </div>
+          <div class="fw-number">I</div>
+        </div>
+
+        <div class="framework-level animate-in delay-4">
+          <div class="fw-scale">
+            <span class="han">산업</span>
+            <span class="roman">Sectoral · II</span>
+          </div>
+          <div class="fw-body">
+            <div class="label">Clustering · Rivalry · Cross-Sectoral Symbiosis</div>
+            <div class="detail">How domestic competitive intensity and clustered industries (K-content ↔ K-beauty ↔ K-tech) amplify firm-level performance.</div>
+          </div>
+          <div class="fw-number">II</div>
+        </div>
+
+        <div class="framework-level animate-in delay-5">
+          <div class="fw-scale">
+            <span class="han">기업</span>
+            <span class="roman">Firm · III</span>
+          </div>
+          <div class="fw-body">
+            <div class="label">Brand Equity · Resonance · IMC Practice</div>
+            <div class="detail">Keller Customer-Based Brand Equity (1993) &amp; Resonance (2003) · Aaker Brand Identity (1996) — specific practices producing consumer attachment at scale.</div>
+          </div>
+          <div class="fw-number">III</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">05</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6 — PHASES -->
+  <section class="slide" data-slide="6">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>05 · Research Methodology</span></div>
+      <div class="right"><span class="han"><span class="accent">연구</span> 방법론</span> · Mixed-Methods</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Research Design <span class="han-suffix">연구 설계</span>
+      </div>
+      <h2 class="section-title animate-in delay-2">
+        Three phases. <em>Each informs</em> the next.
+      </h2>
+      <p class="body-text animate-in delay-2" style="max-width: 70ch; margin-bottom: 0.5rem;">
+        A mixed-methods, sequential explanatory design (Creswell &amp; Plano Clark, 2017) — pragmatist philosophy,
+        combining qualitative case depth with quantitative hypothesis testing.
+      </p>
+
+      <div class="phases">
+        <div class="phase animate-in delay-3">
+          <div class="phase-top">
+            <div class="phase-num">i.<span class="kr">일</span></div>
+            <div class="phase-verb">Build<br>구축</div>
+          </div>
+          <div class="phase-name">Korean Benchmark Construction</div>
+          <ul>
+            <li>Multi-case analysis of Korean exemplars</li>
+            <li>Expert interviews (n ≈ 15–20)</li>
+            <li>Benchmarking framework drafting</li>
+          </ul>
+        </div>
+
+        <div class="phase animate-in delay-4">
+          <div class="phase-top">
+            <div class="phase-num">ii.<span class="kr">이</span></div>
+            <div class="phase-verb">Apply<br>적용</div>
+          </div>
+          <div class="phase-name">Thai Comparative Application</div>
+          <ul>
+            <li>Matched Thai cases</li>
+            <li>Bounded UTCC institutional study</li>
+            <li>Thai practitioner interviews (n ≈ 15–20)</li>
+          </ul>
+        </div>
+
+        <div class="phase animate-in delay-5">
+          <div class="phase-top">
+            <div class="phase-num">iii.<span class="kr">삼</span></div>
+            <div class="phase-verb">Test<br>검증</div>
+          </div>
+          <div class="phase-name">Transferability Testing</div>
+          <ul>
+            <li>Structured survey (n ≈ 300–400)</li>
+            <li>Boundary-condition analysis</li>
+            <li>Integrated joint-display findings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">06</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7 — PHASE 1 -->
+  <section class="slide" data-slide="7">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>05.1 · Phase One</span></div>
+      <div class="right"><span class="han"><span class="accent">일</span> 단계</span> · Build</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Phase 01 <span class="han-suffix">한국 벤치마크 구축</span>
+      </div>
+
+      <div class="phase-detail">
+        <div class="phase-marker animate-in delay-2">
+          <div class="mega-num">i.</div>
+          <span class="kr-han">일 단계</span>
+          <div class="big-label">Constructing the<br>Korean Benchmark</div>
+          <div class="sub">Qualitative · Benchmark Construction</div>
+        </div>
+
+        <div class="phase-content animate-in delay-3">
+          <h3>Case selection <span class="mono">· Purposive · Theoretical</span></h3>
+          <div class="chip-row">
+            <span class="chip">Samsung</span>
+            <span class="chip">Amorepacific</span>
+            <span class="chip">HYBE</span>
+            <span class="chip">CJ ENM</span>
+            <span class="chip">Naver</span>
+            <span class="chip">Korean University</span>
+          </div>
+
+          <h3>Data sources <span class="mono">· Triangulated</span></h3>
+          <p>Triangulated across (a) public secondary material — annual reports, investor communications, trade press;
+          (b) semi-structured expert interviews with Korean marketing executives, agency leads, academic specialists; and
+          (c) direct observation of brand touchpoints.</p>
+
+          <h3>Output <span class="mono">· Framework</span></h3>
+          <p>A theoretically grounded benchmarking framework specifying the firm-level capabilities, sectoral conditions,
+          and national-level institutional factors underlying Korean brand competitiveness — the instrument Phase 2 will apply.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">07</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8 — PHASE 2 -->
+  <section class="slide" data-slide="8">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>05.2 · Phase Two</span></div>
+      <div class="right"><span class="han"><span class="accent">이</span> 단계</span> · Apply</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Phase 02 <span class="han-suffix">태국 비교 적용</span>
+      </div>
+
+      <div class="phase-detail">
+        <div class="phase-marker gold animate-in delay-2">
+          <div class="mega-num">ii.</div>
+          <span class="kr-han">이 단계</span>
+          <div class="big-label">Thai Comparative<br>Application</div>
+          <div class="sub">Qualitative · Comparative Application</div>
+        </div>
+
+        <div class="phase-content animate-in delay-3">
+          <h3>Matched case design <span class="mono">· Analytic, Not Mechanical</span></h3>
+          <p>The Phase 1 framework is applied to Thai cases matched analytically —
+          on sector and strategic position. The objective is disciplined comparison,
+          not forced equivalence between non-identical national contexts.</p>
+
+          <h3>Bounded institutional case study <span class="mono">· UTCC</span></h3>
+          <p>A privileged empirical site: the researcher's senior role at UTCC provides legitimate, continuous access
+          to strategic decisions, campaign data, and institutional dilemmas rarely available to external researchers.
+          A documented firewall between administrative authority and research recruitment manages the dual role.</p>
+
+          <h3>Practitioner interviews <span class="mono">· n ≈ 15–20</span></h3>
+          <p>Designed to surface the strategic logics, institutional constraints, and cultural sense-making through which
+          Thai professionals encounter, adopt, or resist Korean-derived practices.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">08</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9 — PHASE 3 -->
+  <section class="slide" data-slide="9">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>05.3 · Phase Three</span></div>
+      <div class="right"><span class="han"><span class="accent">삼</span> 단계</span> · Test</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Phase 03 <span class="han-suffix">이전 가능성 검증</span>
+      </div>
+
+      <div class="phase-detail">
+        <div class="phase-marker cyan animate-in delay-2">
+          <div class="mega-num">iii.</div>
+          <span class="kr-han">삼 단계</span>
+          <div class="big-label">Testing<br>Transferability</div>
+          <div class="sub">Quantitative · Transferability Testing</div>
+        </div>
+
+        <div class="phase-content animate-in delay-3">
+          <h3>Instrument development <span class="mono">· Two-Stage</span></h3>
+          <p>Survey instrument derived from Phase 1–2 findings. Initial draft piloted with ≈ 30 practitioners,
+          refined, then administered to a stratified sample of ≈ 300–400 Thai marketing practitioners across sectors.</p>
+
+          <h3>What the survey measures <span class="mono">· Four Dimensions</span></h3>
+          <div class="chip-row">
+            <span class="chip">Familiarity &amp; Adoption</span>
+            <span class="chip">Perceived Fit</span>
+            <span class="chip">Reported Outcomes</span>
+            <span class="chip">Contextual Moderators</span>
+          </div>
+
+          <h3>Analytical approach <span class="mono">· Integrated</span></h3>
+          <p>Scale validation (CFA) · Regression for main effects · Moderation analysis for boundary conditions ·
+          Structural equation modelling where sample size permits · Integrated joint-display analysis combining
+          qualitative and quantitative findings around shared constructs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">09</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10 — CONTRIBUTIONS -->
+  <section class="slide" data-slide="10">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>06 · Expected Contributions</span></div>
+      <div class="right"><span class="han"><span class="accent">기여</span></span> · Theoretical · Managerial · Policy</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        What this dissertation produces <span class="han-suffix">기대 기여</span>
+      </div>
+      <h2 class="section-title animate-in delay-2">
+        Scholarship with <em>practical teeth</em>.
+      </h2>
+
+      <div class="contrib-grid">
+        <div class="contrib-card animate-in delay-3">
+          <div class="card-top">
+            <div class="roman">I.</div>
+            <div class="han-label">이론</div>
+          </div>
+          <div class="title">Theoretical</div>
+          <div class="desc">An integrated, multi-level Thai–Korean benchmarking framework combining brand-equity theory, sectoral clustering analysis, and nation-branding theory — extensible beyond the Korea–Thailand dyad.</div>
+        </div>
+
+        <div class="contrib-card animate-in delay-4">
+          <div class="card-top">
+            <div class="roman">II.</div>
+            <div class="han-label">경영</div>
+          </div>
+          <div class="title">Managerial</div>
+          <div class="desc">Empirically grounded boundary conditions for transferability of Korean marketing-communication practices to Thai contexts. A disciplined benchmarking instrument Thai organizations can actually use.</div>
+        </div>
+
+        <div class="contrib-card animate-in delay-5">
+          <div class="card-top">
+            <div class="roman">III.</div>
+            <div class="han-label">정책</div>
+          </div>
+          <div class="title">Policy &amp; Curricular</div>
+          <div class="desc">Implications for Thai policy on brand competitiveness, creative industries, and higher-education internationalization. Teaching cases for Thai graduate curricula.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">10</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11 — WHY KSIM -->
+  <section class="slide" data-slide="11">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>07 · Programmatic Fit</span></div>
+      <div class="right"><span class="han">KSIM <span class="accent">적합성</span></span> · Why This Program</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="eyebrow animate-in delay-1">
+        Why KSIM <span class="han-suffix">왜 KSIM인가</span>
+      </div>
+      <h2 class="section-title animate-in delay-2">
+        The rare program that <em>integrates</em><br>
+        where others merely juxtapose.
+      </h2>
+
+      <div class="ksim-grid">
+        <div class="taegeuk animate-in delay-3">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.35"/>
+                <stop offset="60%" stop-color="#FF2D55" stop-opacity="0.08"/>
+                <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.3"/>
+                <stop offset="60%" stop-color="#00E5FF" stop-opacity="0.06"/>
+                <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="softGlow">
+                <feGaussianBlur stdDeviation="2" />
+              </filter>
+            </defs>
+
+            <!-- Outer dashed decorative ring (moon jar reference) -->
+            <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" stroke-dasharray="2 6"/>
+            <circle cx="200" cy="200" r="165" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+
+            <!-- Korean Studies circle (red, glowing) -->
+            <circle cx="145" cy="200" r="115" fill="url(#redGlow)"/>
+            <circle cx="145" cy="200" r="115" fill="none" stroke="#FF2D55" stroke-width="1.2" filter="url(#softGlow)"/>
+
+            <!-- International Management circle (cyan, glowing) -->
+            <circle cx="255" cy="200" r="115" fill="url(#cyanGlow)"/>
+            <circle cx="255" cy="200" r="115" fill="none" stroke="#00E5FF" stroke-width="1.2" filter="url(#softGlow)"/>
+
+            <!-- Labels -->
+            <text x="68" y="108" font-family="Noto Serif KR, serif" font-size="17" fill="#FF2D55" font-weight="500">한국학</text>
+            <text x="68" y="126" font-family="Instrument Serif, serif" font-size="11" fill="rgba(255, 45, 85, 0.75)" font-style="italic">Korean Studies</text>
+
+            <text x="275" y="108" font-family="Noto Serif KR, serif" font-size="17" fill="#00E5FF" font-weight="500">국제경영</text>
+            <text x="275" y="126" font-family="Instrument Serif, serif" font-size="11" fill="rgba(0, 229, 255, 0.75)" font-style="italic">Intl. Management</text>
+
+            <!-- Center labels -->
+            <text x="200" y="192" font-family="Instrument Serif, serif" font-size="28" fill="#F5F3EC" text-anchor="middle" font-style="italic">KSIM</text>
+            <text x="200" y="212" font-family="Noto Serif KR, serif" font-size="11" fill="#D8D4C8" text-anchor="middle">통합의 장</text>
+            <text x="200" y="227" font-family="JetBrains Mono, monospace" font-size="8" fill="#9A968A" text-anchor="middle" letter-spacing="2.5">THE INTEGRATION</text>
+
+            <!-- Obangsaek-inspired color dots -->
+            <circle cx="188" cy="250" r="3.5" fill="#FF2D55"/>
+            <circle cx="200" cy="250" r="3.5" fill="#00E5FF"/>
+            <circle cx="212" cy="250" r="3.5" fill="#FFD54F"/>
+
+            <!-- Bottom caption -->
+            <text x="200" y="370" font-family="Instrument Serif, serif" font-size="11" fill="#9A968A" text-anchor="middle" font-style="italic">Elsewhere: two disciplines joined at the seam.</text>
+            <text x="200" y="386" font-family="Instrument Serif, serif" font-size="11" fill="#9A968A" text-anchor="middle" font-style="italic">Here: one coherent field.</text>
+          </svg>
+        </div>
+
+        <div class="ksim-points">
+          <div class="ksim-point animate-in delay-3">
+            <div class="heading-row">
+              <div class="heading">Cultural depth meets managerial rigour</div>
+              <div class="kr-mark">문화 × 경영</div>
+            </div>
+            <div class="body">A pure business PhD lacks the Korean linguistic and cultural depth; a pure area-studies program lacks the managerial tools. KSIM integrates both.</div>
+          </div>
+          <div class="ksim-point animate-in delay-4">
+            <div class="heading-row">
+              <div class="heading">Chulalongkorn's institutional networks</div>
+              <div class="kr-mark">네트워크</div>
+            </div>
+            <div class="body">Active Korean academic and industry partnerships provide empirical access — Korean firms in Thailand, partner universities — difficult to assemble elsewhere.</div>
+          </div>
+          <div class="ksim-point animate-in delay-5">
+            <div class="heading-row">
+              <div class="heading">Thai standpoint, international standards</div>
+              <div class="kr-mark">태국의 관점</div>
+            </div>
+            <div class="body">A program positioned to produce the Thai-authored, internationally credible scholarship the literature currently lacks.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · KSIM</div>
+      <div class="counter"><span class="current">11</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+  <!-- SLIDE 12 — CLOSING -->
+  <section class="slide closing-slide" data-slide="12">
+    <div class="slide-header">
+      <div class="left"><span class="dot"></span><span>Closing</span></div>
+      <div class="right"><span class="han"><span class="accent">감사합니다</span></span> · Thank you</div>
+    </div>
+
+    <div class="slide-body">
+      <div class="closing-layout">
+        <div>
+          <div class="eyebrow animate-in delay-1">
+            From admiration to understanding <span class="han-suffix">감탄에서 이해로</span>
+          </div>
+          <h1 class="animate-in delay-2">
+            <span class="row">From <span class="accent">admiration</span></span>
+            <span class="row">to <span class="accent">understanding</span>.</span>
+            <span class="row">From <span class="accent">imitation</span></span>
+            <span class="row">to <span class="accent">adaptation</span>.</span>
+          </h1>
+          <p class="closing-lede animate-in delay-4">
+            The gap between Bangkok and Seoul did not open by accident. It will not close on its own.
+            It will close — where it closes — through disciplined scholarship that treats Korean excellence
+            as a <em>system to be understood</em>, not a style to be copied.
+          </p>
+        </div>
+
+        <div class="closing-card animate-in delay-3">
+          <div class="mega-gamsa">감사합니다</div>
+          <div class="gamsa-roman">Gamsahamnida</div>
+
+          <div class="thank-list">
+            <div class="line">
+              <span class="kr">ขอบคุณครับ</span>
+              <span class="en">Thai</span>
+            </div>
+            <div class="line">
+              <span class="kr">Thank you</span>
+              <span class="en">English</span>
+            </div>
+            <div class="line">
+              <span class="kr">Questions &amp; Discussion</span>
+              <span class="en">Q &amp; A</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div class="brand">한국학 국제경영 · Chulalongkorn University · KSIM</div>
+      <div class="counter"><span class="current">12</span> <span class="sep">/</span> 12</div>
+    </div>
+  </section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Previous">←</button>
+  <div class="counter"><span id="current">01</span><span class="sep">/</span>12</div>
+  <button id="next" aria-label="Next">→</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const counter = document.getElementById('current');
+const progress = document.getElementById('progress');
+let current = 0;
+
+function show(idx) {
+  slides[current].classList.remove('active');
+  current = Math.max(0, Math.min(total - 1, idx));
+  slides[current].classList.add('active');
+  counter.textContent = String(current + 1).padStart(2, '0');
+  progress.style.width = ((current + 1) / total * 100) + '%';
+  prev.disabled = current === 0;
+  next.disabled = current === total - 1;
+}
+
+prev.addEventListener('click', () => show(current - 1));
+next.addEventListener('click', () => show(current + 1));
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(current + 1); }
+  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+  if (e.key === 'Home') { e.preventDefault(); show(0); }
+  if (e.key === 'End') { e.preventDefault(); show(total - 1); }
+});
+
+show(0);
+</script>
+
+</body>
+</html>
